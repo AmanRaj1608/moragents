@@ -120,4 +120,5 @@ def rag_agent_clear_messages():
 
     
 if __name__ == '__main__':
+    print("STARTED BACKEND")
     app.run(host='0.0.0.0', port=5000, debug=True)

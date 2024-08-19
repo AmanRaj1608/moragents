@@ -27,6 +27,7 @@ EXPOSE 5000
 
 # Set the environment variable for Flask
 ENV FLASK_APP=src/app.py
+# ENV PYTHONUNBUFFERED=1
 
 # Run the application
 CMD ["flask", "run", "--host", "0.0.0.0"]

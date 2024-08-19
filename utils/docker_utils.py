@@ -55,7 +55,7 @@ def launch_container(image_name, internal_port, dockerfile_path) -> int:
 
     host_port = find_unused_port()
 
-    docker_command = f"docker run -d -p {host_port}:{internal_port} {image_name}"
+    docker_command = f"docker run -d -p -e PYTHONUNBUFFERED=1 {host_port}:{internal_port} {image_name}"
     subprocess.run(docker_command, shell=True, check=True)
     print(f"Docker container of image {image_name} launched with port mapping: {host_port}:{internal_port}")
 

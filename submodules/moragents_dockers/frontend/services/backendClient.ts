@@ -46,6 +46,7 @@ export type SwapMessagePayload = {
     src: string;
     src_address: string;
     src_amount: string | number;
+    interval: number;
 };
 
 export type SwapMessage = ChatMessageBase & {
